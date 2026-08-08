@@ -166,7 +166,7 @@ Please include:
 
 Feedback channels:
 
-- OpenXcom forum: https://openxcom.org/forum/index.php?board=27.0
+- OpenXcom forum: https://openxcom.org/forum/index.php?topic=13136.0
 - Discord: https://discord.gg/8sgFYhrw6t
 
 ## GPL executable source
