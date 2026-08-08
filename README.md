@@ -6,36 +6,36 @@ From the Ashes is a self-contained game built from the OpenXcom / OpenXcom Exten
 
 ## Current recommended build
 
-| Channel | Status | Link |
-| --- | --- | --- |
-| Stable | Not published yet | Alpha 2 is still being validated through release candidates |
-| Release Candidate | **Current recommended public playtest** | [X-Com: From the Ashes 0.2.0 — Alpha 2 RC1](https://github.com/723Studio/From-the-Ashes-releases/releases/tag/v0.2.0-rc.1) |
-| Nightly | Not published currently | Nightly builds are experimental development snapshots |
+**Version:** `v0.2.0`  
+**Milestone:** Alpha 2  
+**GitHub status:** Pre-release  
+**Download:** [X-Com: From the Ashes 0.2.0 — Alpha 2](https://github.com/723Studio/From-the-Ashes-releases/releases/tag/v0.2.0)
 
-Version `0.2.0-rc.1` is intended for broad gameplay testing. It is not the finished game: Alpha 2 covers the current early-game and midgame slice and still needs balance, progression, UX, and stability feedback.
+Alpha 2 is an active-development build intended for broad gameplay testing. It contains the current early-game and midgame campaign slice and still needs balance, progression, UX, and stability feedback.
 
 ## Important: clean installation required
 
-**Save games and options from the previous `1.6.0` builds are not compatible with `0.2.0`. Do not continue an old campaign and do not reuse the old `options.cfg`.**
+**Save games and options from the legacy `1.6.0` builds are not compatible with `0.2.0`. Do not continue an old campaign and do not reuse the old `options.cfg`.**
 
-For Windows, the recommended upgrade procedure is:
+Before starting `0.2.0` on Windows:
 
-1. Exit FTA.
-2. Back up screenshots or logs that you want to keep.
-3. Delete the complete folder:
+1. Back up screenshots or logs that you want to keep.
+2. Delete the complete folder:
 
-```text
-%USERPROFILE%\Documents\OpenXcomFtA
-```
+   ```text
+   %USERPROFILE%\Documents\OpenXcomFtA
+   ```
 
-4. Start from a clean `OpenXcomFtA` folder.
-5. Copy the files from a legally owned installation of the original X-COM: UFO Defense / UFO: Enemy Unknown into:
+3. Recreate the folder and copy your legally owned original X-COM / UFO Defense resources into:
 
-```text
-%USERPROFILE%\Documents\OpenXcomFtA\UFO
-```
+   ```text
+   %USERPROFILE%\Documents\OpenXcomFtA\UFO
+   ```
 
-A valid resource path should contain folders such as:
+4. Extract the new FTA release into a normal game folder.
+5. Start a completely new campaign.
+
+A correct original-resource folder contains directories such as:
 
 ```text
 %USERPROFILE%\Documents\OpenXcomFtA\UFO\GEODATA
@@ -46,66 +46,87 @@ A valid resource path should contain folders such as:
 %USERPROFILE%\Documents\OpenXcomFtA\UFO\UNITS
 ```
 
-For Linux, remove or rename the previous FTA user-data and configuration directories before testing the new release. The default paths are:
+Linux testers should remove or rename their previous FTA data and configuration directories before starting a new campaign:
 
 ```text
 ~/.local/share/openxcomfta
 ~/.config/openxcomfta
 ```
 
-If `XDG_DATA_HOME` or `XDG_CONFIG_HOME` is configured, use the corresponding `openxcomfta` directory there. Put the original game resources in the clean data directory as `UFO`.
+When `XDG_DATA_HOME` or `XDG_CONFIG_HOME` is configured, use the corresponding `openxcomfta` directories instead. Restore the original game files as a clean `UFO` folder in the FTA data directory.
 
-## Alpha 2 RC1 highlights
+## Major changes in 0.2.0
 
-This release contains a large accumulated maintenance and systems pass:
-
-- fixes for a large number of engine, content, progression, UI, and ruleset defects;
-- a substantially reworked **Intelligence** system;
-- a refined main story chain and progression flow;
-- a complete redesign of capturing, containing, and studying monsters and aliens;
-- unified FTA project versioning across the executable, saves, release tags, manifests, and artifacts.
+- fixed a large number of engine, content, progression, UI, and ruleset defects;
+- substantially reworked the **Intelligence system**;
+- refined the **main story chain** and its progression flow;
+- completely redesigned the systems for **capturing, containing, and studying monsters and aliens**;
+- introduced one unified FTA project version across the executable, saves, public tags, manifests, and binary artifacts.
 
 ## Current testing focus
 
-The most valuable test is a full fresh campaign through all currently available Alpha 2 content.
+The most valuable test is a complete fresh playthrough of all currently available Alpha 2 content.
 
 The main question is:
 
 > **Can you reach and successfully destroy the MIB Regional HQ?**
 
-Please report progression blockers, unclear objectives, missions that never appear, research loops, balance spikes, missing resources, crashes, and any state where the campaign can no longer advance.
+Please report where progression stopped even when you did not reach the HQ. Reports about missing missions, research or Intelligence dead ends, unclear objectives, balance spikes, crashes, broken maps, capture/containment problems, and unexpected modified/untrusted status are especially useful.
 
-Full-playthrough recordings are especially useful because they expose pacing, balance, UI friction, unclear rules, and narrative sequencing problems that are difficult to reproduce from a short bug report.
+Full-playthrough recordings are also valuable because they expose pacing, balance, UI friction, unclear rules, and narrative sequencing problems that are difficult to reconstruct from short reports.
 
 ## Download files
 
-The RC1 release contains:
+A complete `0.2.0` release contains:
 
 ```text
-FTA-0.2.0-rc.1-windows-x64.zip
-FTA-0.2.0-rc.1-x86_64.AppImage
-fta-linux-0.2.0-rc.1.tar.gz
+FTA-0.2.0-windows-x64.zip
+FTA-0.2.0-x86_64.AppImage
+fta-linux-0.2.0.tar.gz
 fta-engine-source-0.2.0.tar.gz
+linux-runtime-deps.txt
 manifest.json
 sha256sums.txt
-linux-runtime-deps.txt
 ```
 
 For most players:
 
-- Windows users should download `FTA-0.2.0-rc.1-windows-x64.zip`;
-- Linux users should try `FTA-0.2.0-rc.1-x86_64.AppImage` first;
-- advanced Linux users can use `fta-linux-0.2.0-rc.1.tar.gz`.
+- Windows: download `FTA-0.2.0-windows-x64.zip`;
+- Linux: try `FTA-0.2.0-x86_64.AppImage` first;
+- advanced Linux users can use `fta-linux-0.2.0.tar.gz`.
 
 All public releases are available at:
 
 https://github.com/723Studio/From-the-Ashes-releases/releases
 
-## Required original game resources
+## GitHub release status
 
-FTA does not include files from the original X-COM: UFO Defense / UFO: Enemy Unknown.
+FTA uses one version-only tag for each published project version, for example:
 
-You must provide the resources from a legally owned copy of the original game. Do not report startup errors until the clean `UFO` folder has been restored in the expected data location.
+```text
+v0.2.0
+v0.2.1
+v1.0.0
+```
+
+GitHub displays one of two release statuses:
+
+- **Pre-release** for active-development Alpha and Beta builds;
+- **Latest** for the currently recommended completed release.
+
+The status does not change the version tag or artifact names. A published version is not replaced or retagged; the next publication uses a new project version.
+
+## Required original game files
+
+FTA does not include files from X-COM: UFO Defense / UFO: Enemy Unknown.
+
+You need resources from a legally owned copy of the original game. These files cannot be redistributed with FTA. If the game reports:
+
+```text
+required external resource folders are missing: UFO
+```
+
+then the original resources are missing, incomplete, or stored in the wrong location.
 
 ## Checksums and verification
 
@@ -125,53 +146,44 @@ sha256sum -c sha256sums.txt
 On Windows PowerShell:
 
 ```powershell
-Get-FileHash ".\FTA-0.2.0-rc.1-windows-x64.zip" -Algorithm SHA256
+Get-FileHash ".\FTA-0.2.0-windows-x64.zip" -Algorithm SHA256
 ```
 
-Compare the calculated value with `sha256sums.txt` from the same release.
+Compare the calculated value with the corresponding line in `sha256sums.txt`.
 
 ## Bug reports
 
 Please include:
 
-- FTA version and build ID;
-- operating system;
-- package type: Windows zip, Linux AppImage, or Linux tar.gz;
+- FTA version and build ID from `openxcom.log`;
+- operating system and package type;
 - exact reproduction steps;
-- the relevant save file when possible;
-- `openxcom.log` and crash information;
-- screenshots for visible UI, map, or localization defects;
-- campaign date, research state, equipment, and mission context for balance or progression reports.
+- exact error or crash message;
+- `openxcom.log`;
+- a save shortly before the issue, when possible;
+- a screenshot for visible UI, map, or localization problems;
+- campaign date, research state, equipment, and mission context for progression or balance issues.
 
 Feedback channels:
 
-- OpenXcom forum: https://openxcom.org/forum/index.php?topic=13136.0
+- OpenXcom forum: https://openxcom.org/forum/index.php?board=27.0
 - Discord: https://discord.gg/8sgFYhrw6t
-
-## Release channels
-
-**Stable** means the most thoroughly validated build of the current development milestone. It does not mean that the full game is complete.
-
-**Release Candidate** builds have passed build and startup checks and are published for broader gameplay validation before a stable build is selected.
-
-**Nightly** builds are experimental snapshots containing very recent changes. They may be incomplete, unstable, or save-incompatible and are intended for targeted testing.
 
 ## GPL executable source
 
-The GPL-covered executable source corresponding to public binaries is available in two forms:
+The matching GPL-covered executable source is available in two forms:
 
 - `fta-engine-source-0.2.0.tar.gz` attached to the release;
-- the tagged public source mirror: https://github.com/723Studio/From-the-Ashes-engine
+- the public source mirror tagged `v0.2.0`:
+  https://github.com/723Studio/From-the-Ashes-engine
 
-The source mirror is generated from the private development monorepo's GPL-covered `engine/` subtree. It has no independently maintained product version; its tags correspond to complete FTA releases. Proprietary FTA content, encrypted official packages, private assets, original game resources, and release secrets are not part of the source mirror.
+The source mirror contains no proprietary FTA content, encrypted official packages, private assets, original UFO data, or release secrets.
 
-## Credits and upstream lineage
+## Engine lineage and acknowledgements
 
-From the Ashes is derived from the work of the OpenXcom and OpenXcom Extended communities:
+From the Ashes exists because of the work of the OpenXcom and OpenXcom Extended communities.
 
-- OpenXcom: https://github.com/SupSuper/OpenXcom
-- OpenXcom Extended / OXCE: https://github.com/MeridianOXC/OpenXcom
+- **OpenXcom:** https://github.com/OpenXcom/OpenXcom
+- **OpenXcom Extended / OXCE:** https://github.com/MeridianOXC/OpenXcom
 
-Credits for contributors and third-party community materials are maintained in:
-
-[Credits and third-party materials](CREDITS.md)
+Credits for contributors and third-party community materials are maintained in [CREDITS.md](CREDITS.md).
